@@ -1,0 +1,6 @@
+.scrapy
+*.egg-info/
+build/*
+**/*.pyc
+scrapinghub.yml
+.idea/
