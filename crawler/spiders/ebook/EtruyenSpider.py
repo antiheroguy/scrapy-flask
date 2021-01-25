@@ -11,7 +11,6 @@ class EtruyenSpider(Spider):
     base_url = 'http://etruyen.com/'
 
     start_urls = [
-        # 'http://etruyen.com/index.php?tacgiaid=y&page=68',
         'http://etruyen.com/index.php?tacgiaid=y&page=284'
     ]
 
