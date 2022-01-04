@@ -2,8 +2,9 @@ from scrapy.signals import item_scraped
 from scrapy.signalmanager import dispatcher
 from scrapy.crawler import CrawlerRunner
 from flask import Flask, jsonify
-from crawler.spiders.post.BongdaSpider import BongdaSpider
+from crawler.spiders.post.CNNSpider import CNNSpider
 import crochet
+
 crochet.setup()
 
 app = Flask(__name__)
@@ -14,10 +15,10 @@ def process_result(item, response, spider):
     data.append(dict(item))
 
 
-@app.route('/bongda', methods=['GET'])
-def scape_bongda():
+@app.route('/post', methods=['GET'])
+def scape_post():
     scrape_with_crochet(
-        spider=BongdaSpider
+        spider=CNNSpider
     )
 
     return jsonify(data)

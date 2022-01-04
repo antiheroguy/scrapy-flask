@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 from crawler.items.EbookItem import EbookItem
 from scrapy import Spider, Request
 from scrapy.selector import Selector
